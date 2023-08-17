@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert("Welcome to Eazybanking\n\nCick Ok to continue");
+        let eazybanking = prompt("Input #966 to bank or cancel to halt transaction");
+        if (eazybanking == "#966"){
+            alert("Eazybanking with Zenith Bank\n\nClick Ok to continue")
+        } else {
+            exit()
+        }
+        let transaction = prompt(`
+        1. Transfer
+        2. Airtime
+        3. Data
+        4. Check Balance
+        5. Open Account
+        `)
+        if (transaction == 1){
+            let amount = prompt("Enter amount")
+            let number = prompt("Enter recipient account number")
+            if (amount){
+                alert( `${amount} has been transfered to ${number}`)
+            }
+        }
+
+        if (transaction == 2){
+            let network = prompt("Select network \n1. MTN \n2. GLO \n3. Etisalat \n4 Airtel")
+            let amount = prompt("Enter amount")
+            if (network==1){
+                 alert(`${amount} has been transfered to you MTN line`)
+            }
+            if (network==2){
+                 alert(`${amount} has been transfered to you GLO line`)
+            }
+            if (network==3){
+                 alert(`${amount} has been transfered to you Etisalat line`)
+            }
+            if (network==4){
+                 alert(`${amount} has been transferred to you Airtel line`)
+            }
+        }
+        if (transaction == 3){
+            let data = prompt("1. Self\n2. Others")
+
+                if (data==1){
+                    let amount = prompt("Enter amount")
+                    alert(`${amount} has been credited to you`)
+                }else if (data==2){
+                    let amount = prompt("Enter amount")
+                    let recipient = prompt("Enter the recipient's number")
+                    alert(`${amount} has been credited to ${recipients}`)
+                }
+
+        }
+
+        if (transaction == 4){
+           let balance = Math.floor(Math.random() *500000)
+           let accBalance = alert(`Your accont balance is ${balance} naira only`)
+
+           
+        }
+
+        if (transaction == 5){
+            let accType = prompt(`\t1. Savings
+            2. Current`)
+            if (accType == 1){
+                alert("Congratulations you have opened a Savings account with Zenith Bank")
+            }else if (accType ==2 ){
+                alert("Congratulations you have opened a Current account with Zenith Bank")
+            }
+                else{
+                    alert("Wrong Input")
+                }
+        }
+    
+    
+    
+    </script>
+</body>
+</html>
